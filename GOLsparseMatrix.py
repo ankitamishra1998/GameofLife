@@ -119,7 +119,6 @@ def generation(tup, m, data, row, col, g):
             
     row = []
     col = []
-    print(tup)
     for n in tup:
         row.append(n[0])
         col.append(n[1])
@@ -128,9 +127,7 @@ def generation(tup, m, data, row, col, g):
     d = len(row)
     m = max(max(row), max(col)) + 1
     arr = csr_matrix((data, (row, col)), shape=(m+2,m+2)).toarray()
-    print(row)
-    print(col)
-    print(data)
+ 
     print(arr)
     
     create_grid(tup, len(row), row, col)
