@@ -1,4 +1,4 @@
-# GameofLife
+# GameofLife : http://www.conwaylife.com/w/index.php?title=Conway%27s_Game_of_Life
 
 1. Input the row and column of a hypothetical grid.
 Eg: row: 1, col: 0
