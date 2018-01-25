@@ -76,7 +76,7 @@ def start_game():
     for i in range(d):
             tup_arr.append((row[i],col[i]))
     print(tup_arr)       
-    g = 9
+    g = 20
     generation(tup_arr, m, data, row, col, g)
 
 
@@ -89,7 +89,7 @@ def create_grid(live_tup, d, row, col):
 
     for k in all_tup:
         if k in live_tup:
-            t = 1
+            t = "|||"
         else:
             t = ""
         Label(text=t, relief=RIDGE, width=5).grid(row=k[0], column=k[1])
@@ -125,6 +125,10 @@ def generation(tup, m, data, row, col, g):
 
     data = [1]*len(row)
     d = len(row)
+    if d == 0:
+        print("Game Over")
+        sys.exit()
+    
     m = max(max(row), max(col)) + 1
     arr = csr_matrix((data, (row, col)), shape=(m+2,m+2)).toarray()
  
